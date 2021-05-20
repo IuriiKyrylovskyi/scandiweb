@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react';
+import data from '../data';
+import Slide from './Slide';
 
 const Carousel = () => {
-  return (
-    <div>
-      <h1 className="carousel">Carousel</h1>
-    </div>
-  )
-}
+  const [planes, setPlanes] = useState(data);
+  const [index, setindex] = useState(0);
 
-export default Carousel
+  return (
+    <div className="slider__wrapper">
+      <h1 className="slider__title">Carousel Test Projec by Iurii Kyrylovskyi</h1>
+      <div className="sliser__container">
+        {planes.map((plane, planeIndex) => {
+          const { id } = plane;
+          return <Slide key={id} {...plane} />;
+        })}
+        <button className="prev">prev</button>
+        <button className="next">next</button>
+        <button className="goto">go to ???</button>
+        {'slider__img-slider'}
+        {'slider__dot-slider'}
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;

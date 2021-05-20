@@ -97,4 +97,4 @@ const planes = [
   },
 ];
 
-export default data;
+export default planes;

@@ -9,13 +9,13 @@ const Carousel = () => {
   return (
     <div className="slider__wrapper">
       <h1 className="slider__title">Carousel Test Projec by Iurii Kyrylovskyi</h1>
-      <div className="sliser__container">
+      <div className="slider__container">
         {planes.map((plane, planeIndex) => {
           const { id } = plane;
           return <Slide key={id} {...plane} />;
         })}
-        <button className="prev">prev</button>
-        <button className="next">next</button>
+        <button className="prev"/>
+        <button className="next"/>
         <button className="goto">go to ???</button>
         {'slider__img-slider'}
         {'slider__dot-slider'}
